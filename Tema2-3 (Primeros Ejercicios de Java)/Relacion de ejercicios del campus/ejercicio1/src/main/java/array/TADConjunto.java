@@ -61,6 +61,6 @@ public class TADConjunto<E> {
     }
 
     private void resize(int i) {
-        elementos = Arrays.copyOf(elementos, i); 
+        elementos = Arrays.copyOf(elementos, i);
     }
 }
