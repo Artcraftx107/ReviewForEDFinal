@@ -1,7 +1,9 @@
 package array;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 public class TADConjunto<E> {
     private static int INT_CAP = 10;
@@ -62,5 +64,23 @@ public class TADConjunto<E> {
 
     private void resize(int i) {
         elementos = Arrays.copyOf(elementos, i);
+    }
+
+    public TADConjunto<E> diferenciaSimetrica(TADConjunto<E> otherSet){
+        Set<E> conjunto1 = new HashSet<>(Arrays.asList(Arrays.copyOf(elementos, size)));
+        Set<E> conjunto2 = new HashSet<>(Arrays.asList(otherSet.elementos));
+
+        conjunto1.removeAll(conjunto2);
+        conjunto2.removeAll(conjunto1);
+
+        TADConjunto<E> resultado = new TADConjunto<>();
+
+        for(E elemento : conjunto1){
+            resultado.add(elemento);
+        }
+        for(E elemento2 : conjunto2){
+            resultado.add(elemento2);
+        }
+        return resultado; 
     }
 }

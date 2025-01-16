@@ -84,7 +84,7 @@ public class TADLista<E> {
         for(int i = 0; i<size; i++){
             E temp = elements[i];
             elements[i] = elements[size-i-1];
-            elements[size-i-1] = temp; 
+            elements[size-i-1] = temp;
         }
     }
 }
