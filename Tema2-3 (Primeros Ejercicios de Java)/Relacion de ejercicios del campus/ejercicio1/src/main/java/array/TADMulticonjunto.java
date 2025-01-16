@@ -1,7 +1,9 @@
 package array;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 public class TADMulticonjunto<E> {
     private static final int INT_CAP=10;
@@ -85,5 +87,18 @@ public class TADMulticonjunto<E> {
     private void resize(int newCap){
         elements= Arrays.copyOf(elements, newCap);
         counts=Arrays.copyOf(counts, newCap);
+    }
+
+    public TADConjunto<E> toConjunto(){
+        Set<E> conjunto = new HashSet<>();
+        for(int i = 0; i<size; i++){
+            conjunto.add(elements[i]);
+        }
+        TADConjunto<E> resultado = new TADConjunto<>();
+        for(E elemento : conjunto){
+            resultado.add(elemento);
+        }
+
+        return resultado; 
     }
 }

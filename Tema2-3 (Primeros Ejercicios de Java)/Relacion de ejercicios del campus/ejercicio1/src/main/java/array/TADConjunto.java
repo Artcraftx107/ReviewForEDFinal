@@ -81,6 +81,6 @@ public class TADConjunto<E> {
         for(E elemento2 : conjunto2){
             resultado.add(elemento2);
         }
-        return resultado; 
+        return resultado;
     }
 }
