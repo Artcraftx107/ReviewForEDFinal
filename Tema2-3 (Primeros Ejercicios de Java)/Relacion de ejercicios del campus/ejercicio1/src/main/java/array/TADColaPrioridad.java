@@ -27,7 +27,7 @@ public class TADColaPrioridad<E> {
                 resultante.insertInOrder(elementoConPrioridades[i].dato, priority);
             }
         }
-        return resultante; 
+        return resultante;
     }
 
     public void insertInOrder(E item, int prioridad){
