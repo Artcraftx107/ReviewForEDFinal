@@ -25,6 +25,6 @@ public class EvaluarSufija {
                 }
             }
         }
-        return pila.pop(); 
+        return pila.pop();
     }
 }

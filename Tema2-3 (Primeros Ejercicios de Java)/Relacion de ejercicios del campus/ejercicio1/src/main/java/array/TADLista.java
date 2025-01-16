@@ -63,4 +63,28 @@ public class TADLista<E> {
     private boolean isEmpty() {
         return size==0;
     }
+
+    public boolean contiene(E item){
+        return search(item)!=-1;
+    }
+
+    public void eliminarValor(E item){
+        if(contiene(item)){
+            remove(item);
+        }
+    }
+
+    public void eliminarTodo(){
+        for(int i = size; i>=0; i--){
+            remove(elements[i]);
+        }
+    }
+
+    public void invertir(){
+        for(int i = 0; i<size; i++){
+            E temp = elements[i];
+            elements[i] = elements[size-i-1];
+            elements[size-i-1] = temp; 
+        }
+    }
 }
