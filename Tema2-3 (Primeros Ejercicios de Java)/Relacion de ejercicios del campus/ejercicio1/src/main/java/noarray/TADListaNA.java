@@ -61,6 +61,6 @@ public class TADListaNA<E> {
             throw new NoSuchElementException("El elemento "+item+" no esta en la lista");
         }
 
-        return found; 
+        return found;
     }
 }
