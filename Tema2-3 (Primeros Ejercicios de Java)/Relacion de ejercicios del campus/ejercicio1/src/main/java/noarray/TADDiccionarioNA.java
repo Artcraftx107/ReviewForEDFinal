@@ -104,7 +104,7 @@ public class TADDiccionarioNA <K, V>{
             }
         }
 
-        return found; 
+        return found;
     }
     private boolean isEmpty() {
         return size==0;
