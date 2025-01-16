@@ -99,6 +99,6 @@ public class TADMulticonjunto<E> {
             resultado.add(elemento);
         }
 
-        return resultado; 
+        return resultado;
     }
 }
