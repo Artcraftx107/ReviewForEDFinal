@@ -20,6 +20,16 @@ public class TADColaPrioridad<E> {
         size=0;
     }
 
+    public TADColaPrioridad<E> obtainPriority(int priority){
+        TADColaPrioridad<E> resultante = new TADColaPrioridad<>();
+        for(int i = 0; i<size; i++){
+            if(elementoConPrioridades[i].prioridad==priority){
+                resultante.insertInOrder(elementoConPrioridades[i].dato, priority);
+            }
+        }
+        return resultante; 
+    }
+
     public void insertInOrder(E item, int prioridad){
         if(size == elementoConPrioridades.length){
             resize(elementoConPrioridades.length*2); 

@@ -71,7 +71,7 @@ public class TADMulticonjuntoNA<E> {
     }
 
     private boolean isEmpty() {
-        return size==0; 
+        return size==0;
     }
 
     public boolean contains(E item){
