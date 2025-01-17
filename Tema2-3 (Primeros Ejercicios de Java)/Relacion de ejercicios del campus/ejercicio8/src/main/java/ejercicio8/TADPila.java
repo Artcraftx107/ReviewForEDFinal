@@ -29,6 +29,6 @@ public class TADPila<E> {
     }
 
     public boolean isEmpty(){
-        return lista.isEmpty(); 
+        return lista.isEmpty();
     }
 }
